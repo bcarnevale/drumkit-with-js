@@ -20,7 +20,7 @@
 
             <div data-key="83" class="key">
                 <kbd>S</kbd>
-                <span class="sound">hibat</span>
+                <span class="sound">hihat</span>
             </div>
 
             <div data-key="68" class="key">
@@ -60,15 +60,15 @@
 
         </div>
 
-        <audio data-key="65" src=""></audio>
-        <audio data-key="83" src=""></audio>
-        <audio data-key="68" src=""></audio>
-        <audio data-key="70" src=""></audio>
-        <audio data-key="71" src=""></audio>
-        <audio data-key="72" src=""></audio>
-        <audio data-key="74" src=""></audio>
-        <audio data-key="75" src=""></audio>
-        <audio data-key="76" src=""></audio>
+        <audio data-key="65" src="/sounds/clap.wav"></audio>
+        <audio data-key="83" src="/sounds/hihat.wav"></audio>
+        <audio data-key="68" src="/sounds/kick.wav"></audio>
+        <audio data-key="70" src="/sounds/openhat.wav"></audio>
+        <audio data-key="71" src="/sounds/boom.wav"></audio>
+        <audio data-key="72" src="/sounds/ride.wav"></audio>
+        <audio data-key="74" src="/sounds/snare.wav"></audio>
+        <audio data-key="75" src="/sounds/tom.wav"></audio>
+        <audio data-key="76" src="/sounds/tink.wav"></audio>
 
         <script>
             
@@ -86,8 +86,8 @@
                 this.classList.remove('playing'); // this refers to the class the event listener is called on
             }
 
-            const keys = document.querySelector('.key');
-            keys.forEach(key => key.addEventListener('transitioned', removeTransition));
+            const eachKey = document.querySelectorAll('.key');
+            eachKey.forEach(key => key.addEventListener('transitioned', removeTransition));
             window.addEventListener('keydown', playSound);
 
         </script>
